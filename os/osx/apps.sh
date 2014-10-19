@@ -13,6 +13,7 @@ if [ "$model" = "MacBookPro8,2" ]
 then
 	apps=(
 		acorn
+		adobe-reader
 		alfred
 		all2mp3
 		aviator
@@ -24,13 +25,18 @@ then
 		box-sync
 		burn
 		caffeine
+		cake-brew
 		cartographica
+		cheatsheet
 		controlplane
+		dash
 		default-folder-x
 		disk-inventory-x
 		divvy
 		dropbox
+		dupeguru
 		expandrive
+		eyetv
 		firefox
 		fission
 		flux
@@ -46,7 +52,11 @@ then
 		jbidwatcher
 		kaleidoscope
 		karabiner
+		key-codes
 		keyboard-maestro
+		kismac
+		launchcontrol
+		launchy
 		little-snitch
 		mactex
 		monolingual
@@ -67,6 +77,7 @@ then
 		r
 		scrivener
 		seil
+		selfcontrol
 		shuttle
 		sidestep
 		sitesucker
@@ -74,8 +85,8 @@ then
 		skim
 		skype
 		slack
-		spectacle
 		smcfancontrol
+		spectacle
 		splitshow
 		stattransfer11
 		sublime-text3
@@ -96,6 +107,7 @@ elif [ "$model" = "MacPro6,1" ]
 then
 	apps=(
 		acorn
+		adobe-reader
 		alfred
 		all2mp3
 		aviator
@@ -108,14 +120,19 @@ then
 		box-sync
 		burn
 		caffeine
+		cake-brew
 		cartographica
+		cheatsheet
 		cloudpull
 		controlplane
+		dash
 		default-folder-x
 		disk-inventory-x
 		divvy
 		dropbox
+		dupeguru
 		expandrive
+		eyetv
 		firefox
 		fission
 		flux
@@ -131,7 +148,11 @@ then
 		jbidwatcher
 		kaleidoscope
 		karabiner
+		key-codes
 		keyboard-maestro
+		kismac
+		launchcontrol
+		launchy
 		little-snitch
 		mactex
 		nvalt
@@ -150,6 +171,7 @@ then
 		r
 		scrivener
 		seil
+		selfcontrol
 		shuttle
 		sidestep
 		sitesucker
@@ -177,6 +199,7 @@ then
 else
 	apps=(
 		acorn
+		adobe-reader
 		betterzipql
 		bibdesk
 		box-sync
@@ -194,6 +217,7 @@ else
 		google-chrome
 		imagealpha
 		imageoptim
+		integrity
 		iterm2
 		kaleidoscope
 		mactex
