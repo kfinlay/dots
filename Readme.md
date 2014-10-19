@@ -9,7 +9,7 @@ WIP bootstrapping library for osx & ubuntu (and maybe others!)
 One-liner:
 
 ```
-(mkdir -p /tmp/dots && cd /tmp/dots && curl -L https://github.com/matthewmueller/dots/archive/master.tar.gz | tar zx --strip 1 && sh ./install.sh)
+(mkdir -p /tmp/dots && cd /tmp/dots && curl -L https://github.com/kfinlay/dots/archive/master.tar.gz | tar zx --strip 1 && sh ./install.sh)
 ```
 
 ## Design
@@ -52,7 +52,10 @@ The Ubuntu build does the following:
 * git-config
 * ubuntu profile
 * logging
-* much more...
+* Apps to add
+  * Acorn
+  * ImageAlpha
+  * ImageOptim
 
 # Credits
 

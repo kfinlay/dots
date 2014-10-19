@@ -4,51 +4,251 @@
 
 set -e
 
+# Identify machine
+model=$(ioreg -c "IOPlatformExpertDevice" | awk -F '"' '/model/ {print $4}')
+echo $model
+
 # Apps
-apps=(
-  alfred
-  dropbox
-  google-chrome
-  qlcolorcode
-  screenflick
-  slack
-  transmit
-  appcleaner
-  firefox
-  hazel
-  qlmarkdown
-  seil
-  spotify
-  vagrant
-  arq
-  flash
-  iterm2
-  qlprettypatch
-  shiori
-  sublime-text3
-  virtualbox
-  atom
-  flux
-  mailbox
-  qlstephen
-  sketch
-  tower
-  vlc
-  cloudup
-  font-m-plus
-  nvalt
-  quicklook-json
-  skype
-  transmission
-  apikitchen
-  mamp
-)
+if [ "$model" = "MacBookPro8,2" ]
+then
+	apps=(
+		acorn
+		alfred
+		all2mp3
+		aviator
+		bartender
+		bettertouchtool
+		betterzip
+		betterzipql
+		bibdesk
+		box-sync
+		burn
+		caffeine
+		cartographica
+		controlplane
+		default-folder-x
+		disk-inventory-x
+		divvy
+		dropbox
+		expandrive
+		firefox
+		fission
+		flux
+		geektool
+		gitx-rowanj
+		google-chrome
+		handbrake
+		hazel
+		imagealpha
+		imageoptim
+		integrity
+		iterm2
+		jbidwatcher
+		kaleidoscope
+		karabiner
+		keyboard-maestro
+		little-snitch
+		mactex
+		monolingual
+		nosleep
+		nvalt
+		ocenaudio
+		octave
+		omnifocus
+		omnigraffle
+		onepassword
+		pacifist
+		qlcolorcode
+		qlmarkdown
+		qlprettypatch
+		qlstephen
+		quicklook-csv
+		quicklook-json
+		r
+		scrivener
+		seil
+		shuttle
+		sidestep
+		sitesucker
+		sketchup
+		skim
+		skype
+		slack
+		spectacle
+		smcfancontrol
+		splitshow
+		stattransfer11
+		sublime-text3
+		superduper
+		suspicious-package
+		textmate
+		textwrangler
+		timemachinescheduler
+		tower 
+		transmission
+		ubersicht
+		unrarx
+		vlc
+		webp-quicklook
+		xld
+	)	
+elif [ "$model" = "MacPro6,1" ]
+then
+	apps=(
+		acorn
+		alfred
+		all2mp3
+		aviator
+		backblaze-downloader
+		bartender
+		bettertouchtool
+		betterzip
+		betterzipql
+		bibdesk
+		box-sync
+		burn
+		caffeine
+		cartographica
+		cloudpull
+		controlplane
+		default-folder-x
+		disk-inventory-x
+		divvy
+		dropbox
+		expandrive
+		firefox
+		fission
+		flux
+		geektool
+		gitx-rowanj
+		google-chrome
+		handbrake
+		hazel
+		imagealpha
+		imageoptim
+		integrity
+		iterm2
+		jbidwatcher
+		kaleidoscope
+		karabiner
+		keyboard-maestro
+		little-snitch
+		mactex
+		nvalt
+		ocenaudio
+		octave
+		omnifocus
+		omnigraffle
+		onepassword
+		pacifist
+		qlcolorcode
+		qlmarkdown
+		qlprettypatch
+		qlstephen
+		quicklook-csv
+		quicklook-json
+		r
+		scrivener
+		seil
+		shuttle
+		sidestep
+		sitesucker
+		sketchup
+		skim
+		skype
+		slack
+		spectacle
+		splitshow
+		stattransfer11
+		sublime-text3
+		superduper
+		suspicious-package
+		textmate
+		textwrangler
+		timemachinescheduler
+		tower 
+		transmission
+		ubersicht
+		unrarx
+		vlc
+		webp-quicklook
+		xld
+	)
+else
+	apps=(
+		acorn
+		betterzipql
+		bibdesk
+		box-sync
+		burn
+		caffeine
+		cartographica
+		default-folder-x
+		disk-inventory-x
+		divvy
+		dropbox
+		expandrive
+		firefox
+		flux
+		geektool
+		google-chrome
+		imagealpha
+		imageoptim
+		iterm2
+		kaleidoscope
+		mactex
+		octave
+		omnigraffle
+		onepassword
+		qlcolorcode
+		qlmarkdown
+		qlprettypatch
+		qlstephen
+		quicklook-csv
+		quicklook-json
+		r
+		scrivener
+		sitesucker
+		sketchup
+		skim
+		skype
+		splitshow
+		stattransfer11
+		sublime-text3
+		superduper
+		suspicious-package
+		textmate
+		textwrangler
+		ubersicht
+		unrarx
+		vlc
+		webp-quicklook
+	)
+fi
+
+# patterns - not available
+# parallels - not working
+	# ==> Downloading http://download.parallels.com/desktop/v9/update2.hotfix2/ParallelsDesktop-9.0.24237.1028877.dmg
+	# ######################################################################## 100.0%
+	# ==> Running installer for parallels; your password may be necessary.
+	# ==> Package installers may write to any location; options such as --appdir are ignored.
+	# ==> installer: Package name is Parallels Desktop
+	# ==> installer: Installing at base path /
+	# ==> installer: The install failed (The Installer encountered an error that caused the installation to fail. Contact the software
+	# Error: Command failed to execute!
+	#
+	# ==> Failed command:
+	# ["/usr/bin/sudo", "-E", "--", "/usr/sbin/installer", "-pkg", "#<Pathname:/opt/homebrew-cask/Caskroom/parallels/9.0.24237.1028877/Install.mpkg>", "-target", "/"]
+	#
+	# ==> Output of failed command:
+	# installer: Package name is Parallels Desktop
+	# installer: Installing at base path /
+	# installer: The install failed (The Installer encountered an error that caused the installation to fail. Contact the software manufacturer for assistance.)
 
 # fonts
 fonts=(
   font-m-plus
   font-clear-sans
-  font-roboto
 )
 
 # Specify the location of the apps
@@ -67,8 +267,7 @@ main() {
 
   # Install homebrew-cask
   echo "installing cask..."
-  brew tap phinze/homebrew-cask
-  brew install brew-cask
+  brew install caskroom/cask/brew-cask
 
   # Tap alternative versions
   brew tap caskroom/versions
@@ -81,12 +280,13 @@ main() {
   brew cask install --appdir=$appdir ${apps[@]}
 
   # install fonts
-  echo "installing fonts..."
-  brew cask install ${fonts[@]}
+  #echo "installing fonts..."
+  #brew cask install ${fonts[@]}
 
   # link with alfred
   alfred
   cleanup
+  
 }
 
 homebrew() {
@@ -105,4 +305,5 @@ cleanup() {
 }
 
 main "$@"
+
 exit 0

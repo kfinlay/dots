@@ -16,15 +16,27 @@ fi
 osx="$os/osx"
 
 # Run each program
-sh "$osx/defaults.sh"
+# gem install xcode-installer
 sh "$osx/binaries.sh"
 sh "$osx/apps.sh"
+sh "$osx/defaults.sh"
+sh "$osx/duti.sh"
 
-# Symlink the profile
-if [[ ! -e "$HOME/.bash_profile" ]]; then
-  echo "symlinking: $osx/profile.sh => $HOME/.bash_profile"
-  symlink "$osx/profile.sh" "$HOME/.bash_profile"
-  source $HOME/.bash_profile
-else
-  echo "$HOME/.bash_profile already exists. remove and run again."
+# prompt for private script, run, then delete
+read -p "Please enter the URL for your private bash install script (or enter for none)?" privurl
+if [ -n "$privurl" ]; then
+	cd "$osx"
+	curl -L -o "private.sh" "$privurl"
+	sh "$osx/private.sh"
+	rm "$osx/private.sh"
 fi
+
+# Restored by mackup
+# # Symlink the profile
+# if [[ ! -e "$HOME/.bash_profile" ]]; then
+#   echo "symlinking: $osx/profile.sh => $HOME/.bash_profile"
+#   symlink "$osx/profile.sh" "$HOME/.bash_profile"
+#   source $HOME/.bash_profile
+# else
+#   echo "$HOME/.bash_profile already exists. remove and run again."
+# fi
