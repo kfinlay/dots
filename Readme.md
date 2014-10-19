@@ -52,10 +52,6 @@ The Ubuntu build does the following:
 * git-config
 * ubuntu profile
 * logging
-* Apps to add
-  * Acorn
-  * ImageAlpha
-  * ImageOptim
 
 # Credits
 
