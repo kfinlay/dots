@@ -47,6 +47,7 @@ brew install hub
 brew install mackup 
 brew install matplotlib
 brew install mongo
+brew install node
 brew install numpy
 brew install onepass 
 brew install pandoc 
@@ -74,6 +75,7 @@ brew linkapps
 pip install --upgrade setuptools
 pip install --upgrade pip
 pip install virtualenv
+pip install virtualenvwrapper
 pip install nose
 pip install pyparsing
 pip install python-dateutil

@@ -90,6 +90,7 @@ then
 		spectacle
 		splitshow
 		stattransfer11
+		sourcetree
 		sublime-text3
 		superduper
 		suspicious-package
@@ -184,6 +185,7 @@ then
 		spectacle
 		splitshow
 		stattransfer11
+		sourcetree
 		sublime-text3
 		superduper
 		suspicious-package
