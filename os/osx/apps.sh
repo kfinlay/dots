@@ -61,7 +61,7 @@ kfapps=(
 	bartender
 	bettertouchtool
 	betterzip
-	cake-brew
+	cakebrew
 	cheatsheet
 	controlplane
 	dash
@@ -95,7 +95,7 @@ kfapps=(
 	tower 
 	transmission
 	xld	
-)	
+)
 kfmacproapps=(
 	backblaze-downloader
 	cloudpull
@@ -153,7 +153,7 @@ main() {
   model=$(ioreg -c "IOPlatformExpertDevice" | awk -F '"' '/model/ {print $4}')
   echo $model
   if [ "$model" = "MacPro6,1" ]; then
-    brew cask install --appdir=$appdir ${kfapps[@]}
+    #brew cask install --appdir=$appdir ${kfapps[@]}
     echo test
     brew cask install --appdir=$appdir ${kfmacproapps[@]}
     echo testtest
