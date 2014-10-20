@@ -96,11 +96,11 @@ kfapps=(
 	transmission
 	xld	
 )	
-kfmacbookapps=(
+kfmacproapps=(
 	backblaze-downloader
 	cloudpull
 )
-kfmacproapps=(
+kfmacbookapps=(
 	nosleep
 )
 
@@ -154,7 +154,9 @@ main() {
   echo $model
   if [ "$model" = "MacPro6,1" ]; then
     brew cask install --appdir=$appdir ${kfapps[@]}
+    echo test
     brew cask install --appdir=$appdir ${kfmacproapps[@]}
+    echo testtest
   fi 
   if [ "$model" = "MacBookPro8,2" ]; then
     brew cask install --appdir=$appdir ${kfapps[@]}
@@ -167,6 +169,7 @@ main() {
 
   # link with alfred
   alfred
+  echo testtestest
   cleanup
   
 }
