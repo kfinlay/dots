@@ -4,255 +4,105 @@
 
 set -e
 
-# Identify machine
-model=$(ioreg -c "IOPlatformExpertDevice" | awk -F '"' '/model/ {print $4}')
-echo $model
-
 # Apps
-if [ "$model" = "MacBookPro8,2" ]
-then
-	apps=(
-		acorn
-		adobe-reader
-		alfred
-		all2mp3
-		aviator
-		bartender
-		bettertouchtool
-		betterzip
-		betterzipql
-		bibdesk
-		box-sync
-		burn
-		caffeine
-		cake-brew
-		cartographica
-		cheatsheet
-		controlplane
-		dash
-		default-folder-x
-		disk-inventory-x
-		divvy
-		dropbox
-		dupeguru
-		expandrive
-		eyetv
-		firefox
-		fission
-		flux
-		geektool
-		github
-		gitx-rowanj
-		google-chrome
-		handbrake
-		hazel
-		imagealpha
-		imageoptim
-		integrity
-		iterm2
-		jbidwatcher
-		kaleidoscope
-		karabiner
-		key-codes
-		keyboard-maestro
-		kismac
-		launchcontrol
-		launchy
-		little-snitch
-		mactex
-		monolingual
-		nosleep
-		nvalt
-		ocenaudio
-		octave
-		omnifocus
-		omnigraffle
-		onepassword
-		pacifist
-		qlcolorcode
-		qlmarkdown
-		qlprettypatch
-		qlstephen
-		quicklook-csv
-		quicklook-json
-		r
-		scrivener
-		seil
-		selfcontrol
-		shuttle
-		sidestep
-		sitesucker
-		sketchup
-		skim
-		skype
-		slack
-		smcfancontrol
-		spectacle
-		splitshow
-		stattransfer11
-		sourcetree
-		sublime-text3
-		superduper
-		suspicious-package
-		textmate
-		textwrangler
-		timemachinescheduler
-		tower 
-		transmission
-		ubersicht
-		unrarx
-		vlc
-		webp-quicklook
-		xld
-	)	
-elif [ "$model" = "MacPro6,1" ]
-then
-	apps=(
-		acorn
-		adobe-reader
-		alfred
-		all2mp3
-		aviator
-		backblaze-downloader
-		bartender
-		bettertouchtool
-		betterzip
-		betterzipql
-		bibdesk
-		box-sync
-		burn
-		caffeine
-		cake-brew
-		cartographica
-		cheatsheet
-		cloudpull
-		controlplane
-		dash
-		default-folder-x
-		disk-inventory-x
-		divvy
-		dropbox
-		dupeguru
-		expandrive
-		eyetv
-		firefox
-		fission
-		flux
-		geektool
-		github
-		gitx-rowanj
-		google-chrome
-		handbrake
-		hazel
-		imagealpha
-		imageoptim
-		integrity
-		iterm2
-		jbidwatcher
-		kaleidoscope
-		karabiner
-		key-codes
-		keyboard-maestro
-		kismac
-		launchcontrol
-		launchy
-		little-snitch
-		mactex
-		nvalt
-		ocenaudio
-		octave
-		omnifocus
-		omnigraffle
-		onepassword
-		pacifist
-		qlcolorcode
-		qlmarkdown
-		qlprettypatch
-		qlstephen
-		quicklook-csv
-		quicklook-json
-		r
-		scrivener
-		seil
-		selfcontrol
-		shuttle
-		sidestep
-		sitesucker
-		sketchup
-		skim
-		skype
-		slack
-		spectacle
-		splitshow
-		stattransfer11
-		sourcetree
-		sublime-text3
-		superduper
-		suspicious-package
-		textmate
-		textwrangler
-		timemachinescheduler
-		tower 
-		transmission
-		ubersicht
-		unrarx
-		vlc
-		webp-quicklook
-		xld
-	)
-else
-	apps=(
-		acorn
-		adobe-reader
-		betterzipql
-		bibdesk
-		box-sync
-		burn
-		caffeine
-		cartographica
-		default-folder-x
-		disk-inventory-x
-		divvy
-		dropbox
-		expandrive
-		firefox
-		flux
-		geektool
-		google-chrome
-		imagealpha
-		imageoptim
-		integrity
-		iterm2
-		kaleidoscope
-		mactex
-		octave
-		omnigraffle
-		onepassword
-		qlcolorcode
-		qlmarkdown
-		qlprettypatch
-		qlstephen
-		quicklook-csv
-		quicklook-json
-		r
-		scrivener
-		sitesucker
-		sketchup
-		skim
-		skype
-		splitshow
-		stattransfer11
-		sublime-text3
-		superduper
-		suspicious-package
-		textmate
-		textwrangler
-		ubersicht
-		unrarx
-		vlc
-		webp-quicklook
-	)
-fi
+commonapps=(
+	acorn
+	adobe-reader
+	betterzipql
+	bibdesk
+	box-sync
+	burn
+	caffeine
+	cartographica
+	default-folder-x
+	disk-inventory-x
+	divvy
+	dropbox
+	expandrive
+	firefox
+	flux
+	google-chrome
+	imagealpha
+	imageoptim
+	integrity
+	iterm2
+	kaleidoscope
+	mactex
+	octave
+	omnigraffle
+	qlcolorcode
+	qlmarkdown
+	qlprettypatch
+	qlstephen
+	quicklook-csv
+	quicklook-json
+	r
+	scrivener
+	sitesucker
+	sketchup
+	skim
+	skype
+	splitshow
+	stattransfer11
+	sublime-text3
+	superduper
+	suspicious-package
+	textmate
+	textwrangler
+	ubersicht
+	unrarx
+	vlc
+	webp-quicklook
+)
+kfapps=(
+	alfred
+	all2mp3
+	aviator
+	bartender
+	bettertouchtool
+	betterzip
+	cake-brew
+	cheatsheet
+	controlplane
+	dash
+	dupeguru
+	eyetv
+	fission
+	github
+	gitx-rowanj
+	handbrake
+	hazel
+	jbidwatcher
+	karabiner
+	key-codes
+	keyboard-maestro
+	kismac
+	launchcontrol
+	launchy
+	little-snitch
+	nvalt
+	ocenaudio
+	onepassword
+	pacifist
+	seil
+	selfcontrol
+	shuttle
+	sidestep
+	slack
+	smcfancontrol
+	spectacle
+	timemachinescheduler
+	tower 
+	transmission
+	xld	
+)	
+kfmacbookapps=(
+	backblaze-downloader
+	cloudpull
+)
+kfmacproapps=(
+	nosleep
+)
 
 # patterns - not available
 # parallels - not working
@@ -282,19 +132,12 @@ fonts=(
 # Specify the location of the apps
 appdir="/Applications"
 
-# Check for Homebrew
-if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
 main() {
-
   # Ensure homebrew is installed
   homebrew
 
   # Install homebrew-cask
-  echo "installing cask..."
+  echo "Installing cask..."
   brew install caskroom/cask/brew-cask
 
   # Tap alternative versions
@@ -304,8 +147,19 @@ main() {
   brew tap caskroom/fonts
 
   # install apps
-  echo "installing apps..."
-  brew cask install --appdir=$appdir ${apps[@]}
+  echo "Installing apps..."
+  brew cask install --appdir=$appdir ${commonapps[@]}
+  # Identify machine
+  model=$(ioreg -c "IOPlatformExpertDevice" | awk -F '"' '/model/ {print $4}')
+  echo $model
+  if [ "$model" = "MacPro6,1" ]; then
+    brew cask install --appdir=$appdir ${kfapps[@]}
+    brew cask install --appdir=$appdir ${kfmacproapps[@]}
+  fi 
+  if [ "$model" = "MacBookPro8,2" ]; then
+    brew cask install --appdir=$appdir ${kfapps[@]}
+    brew cask install --appdir=$appdir ${kfmacbookapps[@]}
+  fi
 
   # install fonts
   #echo "installing fonts..."
