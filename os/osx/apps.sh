@@ -89,7 +89,6 @@ kfapps=(
 	shuttle
 	sidestep
 	slack
-	smcfancontrol
 	spectacle
 	timemachinescheduler
 	tower 
@@ -102,6 +101,7 @@ kfmacproapps=(
 )
 kfmacbookapps=(
 	nosleep
+	smcfancontrol
 )
 
 # patterns - not available
