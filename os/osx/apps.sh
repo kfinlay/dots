@@ -41,6 +41,7 @@ then
 		fission
 		flux
 		geektool
+		github
 		gitx-rowanj
 		google-chrome
 		handbrake
@@ -137,6 +138,7 @@ then
 		fission
 		flux
 		geektool
+		github
 		gitx-rowanj
 		google-chrome
 		handbrake
