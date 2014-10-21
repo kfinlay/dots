@@ -30,10 +30,6 @@ brew install bash
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
-# Python taps
-brew tap samueljohn/python
-brew tap homebrew/science
-
 # Install the binaries
 brew install ack
 brew install duti 
@@ -48,18 +44,14 @@ brew install mackup
 brew install matplotlib
 brew install mongo
 brew install node
-brew install numpy
 brew install onepass 
 brew install pandoc 
-brew install pyqt
-brew install python
 brew install python3
 brew install rbenv
 brew install rbenv-default-gems
 brew install rbenv-gem-rehash 
 brew install rename
 brew install ruby-build 
-brew install scipy
 brew install sshfs
 brew install terminal-notifier 
 brew install translate-shell 
@@ -71,20 +63,8 @@ brew install zeromq
 brew install zopfli
 brew linkapps
 
-# other Python stuff
-pip install --upgrade setuptools
-pip install --upgrade pip
-pip install virtualenv
-pip install virtualenvwrapper
-pip install nose
-pip install pyparsing
-pip install python-dateutil
-pip install pep8
-pip install pyzmq
-pip install pygments
-pip install jinja2
-pip install tornado
-pip install ipython
+# ScipySuperpack from https://github.com/fonnesbeck/ScipySuperpack
+curl -O https://raw.githubusercontent.com/fonnesbeck/ScipySuperpack/master/install_superpack.sh && sh install_superpack.sh
 
 # other Ruby stuff
 #echo 'eval "$(rbenv init -)"' >> ~/.config/env.sh
