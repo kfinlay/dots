@@ -37,6 +37,7 @@ commonapps=(
 	quicklook-csv
 	quicklook-json
 	r
+	rstudio
 	scrivener
 	sitesucker
 	sketchup
