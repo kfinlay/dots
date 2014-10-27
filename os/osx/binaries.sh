@@ -15,7 +15,7 @@ if test ! $(which brew); then
 fi
 
 # Update homebrew
-brew update && brew upgrade brew-cask
+brew update && brew upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
@@ -67,6 +67,7 @@ brew linkapps
 curl -O https://raw.githubusercontent.com/fonnesbeck/ScipySuperpack/master/install_superpack.sh && sh install_superpack.sh
 
 # other Ruby stuff
+# brew install ruby-install
 #echo 'eval "$(rbenv init -)"' >> ~/.config/env.sh
 #sourcezsh
 #rbenv install 2.1.1
