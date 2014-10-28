@@ -47,11 +47,7 @@ brew install node
 brew install onepass 
 brew install pandoc 
 brew install python3
-brew install rbenv
-brew install rbenv-default-gems
-brew install rbenv-gem-rehash 
 brew install rename
-brew install ruby-build 
 brew install sshfs
 brew install terminal-notifier 
 brew install translate-shell 
@@ -66,8 +62,23 @@ brew linkapps
 # ScipySuperpack from https://github.com/fonnesbeck/ScipySuperpack
 curl -O https://raw.githubusercontent.com/fonnesbeck/ScipySuperpack/master/install_superpack.sh && sh install_superpack.sh
 
+# Ruby installs from http://andycroll.com/mac/ruby/the-simplest-possible-serious-ruby-on-rails-setup-on-mavericks/
+# or see https://gorails.com/setup/osx/10.10-yosemite
+brew install gdbm libffi libyaml openssl readline
+brew install gcc48
+brew install chruby
+brew install ruby-install
+ruby-install ruby 2.1
+# #add to profile
+# source /usr/local/share/chruby/chruby.sh
+# source /usr/local/share/chruby/auto.sh
+# chruby ruby 2.1
+
 # other Ruby stuff
-# brew install ruby-install
+# brew install rbenv
+# brew install rbenv-default-gems
+# brew install rbenv-gem-rehash
+# brew install ruby-build
 #echo 'eval "$(rbenv init -)"' >> ~/.config/env.sh
 #sourcezsh
 #rbenv install 2.1.1
