@@ -1024,17 +1024,8 @@ echo ""
 echo "Skim settings"
 defaults write -app Skim SKAutoReloadFileUpdate -boolean true
 
-if [ "$USER" = "kfinlay" ]
-then
-	if test ! $(which which)
-	then
-		echo ""
-		echo "Fish shell"
-		echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-		chsh -s /usr/local/bin/fish
-	fi
-fi
-
+echo ""
+echo "Privacy settings for OS X"
 curl -O https://fix-macosx.com/fix-macosx.py && /usr/bin/python fix-macosx.py
 
 ###############################################################################
