@@ -81,16 +81,19 @@ kfapps=(
 	launchcontrol
 	launchy
 	little-snitch
+	nsregextester
 	nvalt
 	ocenaudio
 	onepassword
 	pacifist
+	platypus
 	seil
 	selfcontrol
 	shuttle
 	sidestep
 	slack
 	spectacle
+	textexpander
 	timemachinescheduler
 	tower 
 	transmission
@@ -140,6 +143,10 @@ main() {
   # Install homebrew-cask
   echo "Installing cask..."
   brew install caskroom/cask/brew-cask
+
+  # Set caskroom permissions
+  mkdir -p /opt/homebrew-cask/Caskroom
+  sudo chown -R ${USER}:staff /opt/homebrew-cask
 
   # Tap alternative versions
   brew tap caskroom/versions

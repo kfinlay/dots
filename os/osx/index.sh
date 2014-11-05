@@ -31,6 +31,10 @@ if [ -n "$privurl" ]; then
 	rm "$osx/private.sh"
 fi
 
+# cleanup homebrew's cache
+brew cleanup --force -s
+rm -rf $(brew --cache)
+
 # Restored by mackup
 # # Symlink the profile
 # if [[ ! -e "$HOME/.bash_profile" ]]; then
