@@ -151,9 +151,6 @@ main() {
   # Tap alternative versions
   brew tap caskroom/versions
 
-  # Tap the fonts
-  brew tap caskroom/fonts
-
   # install apps
   echo "Installing apps..."
   brew cask install --appdir=$appdir ${commonapps[@]}
@@ -162,9 +159,7 @@ main() {
   echo $model
   if [ "$model" = "MacPro6,1" ]; then
     #brew cask install --appdir=$appdir ${kfapps[@]}
-    echo test
     brew cask install --appdir=$appdir ${kfmacproapps[@]}
-    echo testtest
   fi 
   if [ "$model" = "MacBookPro8,2" ]; then
     brew cask install --appdir=$appdir ${kfapps[@]}
@@ -173,13 +168,14 @@ main() {
 
   # install fonts
   #echo "installing fonts..."
+  # brew tap caskroom/fonts
   #brew cask install ${fonts[@]}
 
   # link with alfred
   alfred
-  echo testtestest
-  cleanup
-  
+
+  # cleanup
+  cleanup 
 }
 
 homebrew() {
