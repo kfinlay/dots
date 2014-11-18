@@ -14,17 +14,11 @@ commonapps=(
 	burn
 	caffeine
 	cartographica
-	default-folder-x
-	disk-inventory-x
-	divvy
 	dropbox
 	expandrive
 	firefox
 	flux
 	google-chrome
-	imagealpha
-	imageoptim
-	integrity
 	iterm2
 	kaleidoscope
 	mactex
@@ -38,12 +32,10 @@ commonapps=(
 	quicklook-json
 	r
 	rstudio
-	scrivener
 	sitesucker
 	sketchup
 	skim
 	skype
-	splitshow
 	stattransfer11
 	sublime-text3
 	superduper
@@ -66,6 +58,9 @@ kfapps=(
 	cheatsheet
 	controlplane
 	dash
+	default-folder-x
+	disk-inventory-x
+	divvy
 	dupeguru
 	eyetv
 	fission
@@ -73,6 +68,9 @@ kfapps=(
 	gitx-rowanj
 	handbrake
 	hazel
+	imagealpha
+	imageoptim
+	integrity
 	jbidwatcher
 	karabiner
 	key-codes
@@ -87,12 +85,14 @@ kfapps=(
 	onepassword
 	pacifist
 	platypus
+	scrivener
 	seil
 	selfcontrol
 	shuttle
 	sidestep
 	slack
 	spectacle
+	splitshow
 	textexpander
 	timemachinescheduler
 	tower 
