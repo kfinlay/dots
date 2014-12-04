@@ -18,12 +18,15 @@ commonapps=(
 	expandrive
 	firefox
 	flux
+	gdal-framework
 	google-chrome
 	iterm2
 	kaleidoscope
 	mactex
+	matplotlib
 	octave
 	omnigraffle
+	qgis
 	qlcolorcode
 	qlmarkdown
 	qlprettypatch
@@ -47,6 +50,7 @@ commonapps=(
 	vlc
 	webp-quicklook
 )
+# gdal-framework and matplotlib are necessary for qgis
 kfapps=(
 	alfred
 	all2mp3
@@ -95,9 +99,9 @@ kfapps=(
 	splitshow
 	textexpander
 	timemachinescheduler
-	tower 
+	tower
 	transmission
-	xld	
+	xld
 )
 kfmacproapps=(
 	backblaze-downloader
@@ -160,7 +164,7 @@ main() {
   if [ "${model:0:6}" = "MacPro" ]; then
     #brew cask install --appdir=$appdir ${kfapps[@]}
     brew cask install --appdir=$appdir ${kfmacproapps[@]}
-  fi 
+  fi
   if [ "${model:0:7}" = "MacBook" ]; then
     brew cask install --appdir=$appdir ${kfapps[@]}
     brew cask install --appdir=$appdir ${kfmacbookapps[@]}
@@ -175,7 +179,7 @@ main() {
   alfred
 
   # cleanup
-  cleanup 
+  cleanup
 }
 
 homebrew() {
