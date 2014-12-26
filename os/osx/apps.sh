@@ -72,6 +72,7 @@ kfapps=(
 	gitx-rowanj
 	handbrake
 	hazel
+	hocus-focus
 	imagealpha
 	imageoptim
 	integrity
