@@ -30,7 +30,7 @@ curl -O https://raw.githubusercontent.com/fonnesbeck/ScipySuperpack/master/insta
 # install Python 3.X
 brew install python3
 # python tools
-pip install scrapy 
+pip install scrapy
 
 # Ruby installs from http://andycroll.com/mac/ruby/the-simplest-possible-serious-ruby-on-rails-setup-on-mavericks/
 # or see https://gorails.com/setup/osx/10.10-yosemite
@@ -84,6 +84,9 @@ brew linkapps
 # if test ! $(which subl); then
 #   ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 # fi
+
+# Install linters (chktex, htmltidy, and json built into ST3)
+brew install shellcheck
 
 # Install Oh My Zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
