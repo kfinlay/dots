@@ -1,0 +1,349 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"stata",
+				"Send line/selection to Stata (Stata 13)"
+			],
+			[
+				"syntax mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"syntax st",
+				"Set Syntax: Stata"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"syntax stata",
+				"Set Syntax: Stata"
+			],
+			[
+				"new ",
+				"ANF: New File"
+			],
+			[
+				"markdown ",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"synat mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"synta mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"new",
+				"ANF: New File"
+			],
+			[
+				"syntax mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"syntax pl",
+				"Set Syntax: plist"
+			],
+			[
+				"plist",
+				"Plist Binary: Toggle XML & Binary"
+			],
+			[
+				"key",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"depen",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 195.0,
+		"history":
+		[
+			"view.settings().get('font_face')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/kfinlay/github/dots"
+	],
+	"file_history":
+	[
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/Stata Enhanced/README.md",
+		"/Users/kfinlay/Dropbox/projects/meth_contingent/meth_contingent.sublime-project",
+		"/Users/kfinlay/Dropbox/vitae/jobmarket/interview_notes.md",
+		"/Users/kfinlay/Dropbox/vitae/jobmarket/private_nonresearch/finlay_resume.tex",
+		"/Users/kfinlay/Dropbox/vitae/finlay_vitae.tex",
+		"/Users/kfinlay/Dropbox/vitae/vitae.sublime-project",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXing/Default.sublime-keymap",
+		"/Users/kfinlay/github/sublime-text-cheatsheet-mac/sublime_text_cheatsheet.tex",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXing/LaTeXing.sublime-settings",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/User/LaTeXing.sublime-settings",
+		"/Users/kfinlay/github/methcrossprice/revision_he/meth_demandresponses.tex",
+		"/Users/kfinlay/Dropbox/sync/btmm login info.txt",
+		"/Users/kfinlay/github/methcrossprice/methcrossprice.sublime-project",
+		"/private/var/folders/px/ff71zdr55_72zm59t9y167f00000gn/T/B1976C24-C0D1-4C4C-B9CA-64A5E58FBF3D/revision_he/meth_demandresponses.tex",
+		"/Users/kfinlay/github/methcrossprice/revision_he/figures/4drug_price_nomodel_distn.eps",
+		"/Users/kfinlay/github/methcrossprice/revision_he/figures/agem_inpatient_sum.eps",
+		"/Users/kfinlay/Library/Preferences/com.uglyapps.HocusFocus.plist",
+		"/Users/kfinlay/Library/Preferences/com.fournova.Tower2.plist",
+		"/Users/kfinlay/Library/Preferences/com.sublimetext.3.plist",
+		"/Users/kfinlay/Library/Preferences/com.apple.finder.plist",
+		"/Users/kfinlay/Dropbox/Mackup/.mackup/hocusfocus.cfg",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
+		"/Users/kfinlay/Dropbox/vitae/jobmarket/interview_notes.txt",
+		"/Users/kfinlay/github/methcrossprice/revision_he/meth_crossprice.do",
+		"/Users/kfinlay/github/methcrossprice/revision_he/meth_crossprice_20141221_173933.log",
+		"/Users/kfinlay/github/methcrossprice/revision_he/tables/table_meth_base_sepiv.tex",
+		"/Users/kfinlay/Dropbox/projects/projects.sublime-project",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/Default (OSX).sublime-keymap",
+		"/Users/kfinlay/Dropbox/courses/econ3230_metrics/exam.tex",
+		"/Users/kfinlay/Dropbox/courses/econ3230_metrics/exam.log",
+		"/Users/kfinlay/Dropbox/courses/econ3230_metrics/quizzes.tex",
+		"/Users/kfinlay/Dropbox/courses/econ3320_urban/exam.tex",
+		"/Users/kfinlay/Dropbox/courses/econ3320_urban/lectures.tex",
+		"/Users/kfinlay/Dropbox/sync/tasks.txt",
+		"/Users/kfinlay/Dropbox/Mackup/Library/Application Support/Übersicht/widgets/sps.widget/index.coffee",
+		"/Users/kfinlay/Dropbox/courses/econ3230_metrics/lectures/Chapter7_Dummies.tex",
+		"/Users/kfinlay/Dropbox/courses/econ3230_metrics/lectures/overview_1.tex",
+		"/Users/kfinlay/Dropbox/courses/econ3230_metrics/lectures.tex",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/User/Widget.sublime-settings",
+		"/Users/kfinlay/Dropbox/Mackup/Library/Application Support/Sublime Text 3/Packages/User/Soda Light 3.sublime-theme",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/ST2-Color-Console-master/Console.tmLanguage",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Installed Packages/Theme - Soda.sublime-package",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/FileBrowser/dired.sublime-settings",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/DashDoc/DashDoc.sublime-settings",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/README.markdown",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/Wrap in command.sublime-snippet",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/table.sublime-snippet",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/LaTeX.sublime-commands",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/LaTeX.sublime-completions",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/figure.sublime-snippet",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/Beamer.sublime-completions",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/Beamer frame.sublime-snippet",
+		"/Users/kfinlay/Library/Application Support/Sublime Text 3/Packages/SublimePeek/SublimePeek.sublime-settings"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"[Directions",
+			"data comes",
+			".\\footnote",
+			"Equation ",
+			". ",
+			"\n\n\n",
+			"\n\n",
+			"equation ",
+			"equation",
+			"Table ",
+			"Figure ",
+			" -- ",
+			"	",
+			" \\meth ",
+			"examples",
+			"exam",
+			"\\answerline[",
+			"grap",
+			"verb",
+			"BibT",
+			"]",
+			"mini",
+			"side",
+			"sidebar",
+			"Sort",
+			"text"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 175.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"project": "dots.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
