@@ -90,6 +90,7 @@ kfapps=(
 	onepassword
 	pacifist
 	platypus
+	presentation
 	scrivener
 	seil
 	selfcontrol
