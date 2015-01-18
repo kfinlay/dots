@@ -59,6 +59,7 @@ kfapps=(
 	bettertouchtool
 	betterzip
 	cakebrew
+	calibre
 	cheatsheet
 	controlplane
 	dash
