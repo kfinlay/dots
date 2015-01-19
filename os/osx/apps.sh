@@ -23,9 +23,11 @@ commonapps=(
 	iterm2
 	kaleidoscope
 	mactex
+	management-tools
 	matplotlib
 	octave
 	omnigraffle
+	privacy-services-manager
 	qgis
 	qlcolorcode
 	qlmarkdown
