@@ -45,7 +45,6 @@ commonapps=(
 	sublime-text3
 	superduper
 	suspicious-package
-	textmate
 	textwrangler
 	ubersicht
 	unrarx
