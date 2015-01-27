@@ -23,9 +23,11 @@ commonapps=(
 	iterm2
 	kaleidoscope
 	mactex
+	management-tools
 	matplotlib
 	octave
 	omnigraffle
+	privacy-services-manager
 	qgis
 	qlcolorcode
 	qlmarkdown
@@ -43,7 +45,6 @@ commonapps=(
 	sublime-text3
 	superduper
 	suspicious-package
-	textmate
 	textwrangler
 	ubersicht
 	unrarx
@@ -59,6 +60,7 @@ kfapps=(
 	bettertouchtool
 	betterzip
 	cakebrew
+	calibre
 	cheatsheet
 	controlplane
 	dash
@@ -90,6 +92,7 @@ kfapps=(
 	onepassword
 	pacifist
 	platypus
+	presentation
 	scrivener
 	seil
 	selfcontrol
