@@ -15,7 +15,7 @@ then
 	do
 		duti -s net.sourceforge.skim-app.skim $EXT all
 	done
-	for EXT in bib cdb css htm html json log m macosx mata md mdown markdown osx php py r rb ris sh shtm shtml statalog sty tex tm_properties txt xml
+	for EXT in bib cdb css htm html json log m macosx mata md mdown markdown osx php py r rb ris sh shtm shtml statalog sty sublime-project sublime-workspace tex tm_properties txt xml
 	do
 		duti -s com.sublimetext.3 $EXT all
 	done
