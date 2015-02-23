@@ -80,6 +80,11 @@ brew install ack fish onepass rename trash tree
 # brew install ffmpeg gcc graphicsmagick hub mongo node pandoc sshfs webkit2png zeromq zopfli
 brew linkapps
 
+# # Add osx specific command line tools
+# if test ! $(which subl); then
+#   ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+# fi
+
 # Install linters (chktex, htmltidy, and json built into ST3)
 brew install shellcheck
 

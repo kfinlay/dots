@@ -179,12 +179,6 @@ main() {
   # brew tap caskroom/fonts
   #brew cask install ${fonts[@]}
 
-  # Add osx specific command line tools
-  if test ! $(which subl); then
-    ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-    export EDITOR='subl -w'
-  fi
-
   # link with alfred
   alfred
 
