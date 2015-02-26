@@ -67,6 +67,7 @@ kfapps=(
 	default-folder-x
 	disk-inventory-x
 	divvy
+	duet
 	dupeguru
 	eyetv
 	fission

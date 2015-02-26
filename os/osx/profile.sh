@@ -8,14 +8,18 @@ export PATH=/usr/local/opt/ruby/bin:$PATH
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 ## Modify NODE_PATH
-export NODE_PATH=lib
+# export NODE_PATH=lib
 
 # Set the Android Home
 # use: brew install android-sdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-# Use sublime for Ctrl+x+e
-EDITOR="subl -w"
+# Use atom for Ctrl+x+e
+EDITOR="atom"
+
+# function subl() {
+#   atom "$@"
+# }
 
 # Default cd path for interactive shells
 if test “${PS1+set}”; then
@@ -160,6 +164,12 @@ alias gl="git log --pretty='format:%Cgreen%h%Creset %an - %s' --graph"
 alias gpom="git pull --rebase origin master"
 alias gcd='cd "`git rev-parse --show-toplevel`"'
 
+# Run `dig` & display the most useful info
+
+function digga {
+  dig +nocmd "$1" any +multiline +noall +answer;
+}
+
 ## Get the process on a given port
 function port() {
   lsof -i ":${1:-80}"
@@ -167,16 +177,13 @@ function port() {
 
 ## subl
 alias s="subl -a"
-
-## mongroup
-alias mg=mongroup
+alias subl=atom
 
 ## gopen - open to own github
 
 function gopen() {
   open "https://github.com/kfinlay/${1}";
 }
-
 
 ## Open localhost
 
