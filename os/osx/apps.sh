@@ -59,6 +59,7 @@ kfapps=(
 	bartender
 	bettertouchtool
 	betterzip
+	bittorrent-sync
 	cakebrew
 	calibre
 	cheatsheet
