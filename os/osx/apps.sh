@@ -107,6 +107,7 @@ kfapps=(
 	timemachinescheduler
 	tower
 	transmission
+	tunnelblick
 	xld
 )
 kfmacproapps=(
