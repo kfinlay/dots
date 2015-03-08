@@ -140,9 +140,11 @@ kfmacbookapps=(
 
 # fonts
 fonts=(
-  font-m-plus
-  font-clear-sans
+  font-inconsolata
+  font-source-code-pro
 )
+# font-m-plus
+# font-clear-sans
 
 # Specify the location of the apps
 appdir="/Applications"
@@ -177,10 +179,10 @@ main() {
     brew cask install --appdir=$appdir ${kfmacbookapps[@]}
   fi
 
-  # install fonts
-  #echo "installing fonts..."
-  # brew tap caskroom/fonts
-  #brew cask install ${fonts[@]}
+  install fonts
+  echo "Installing fonts..."
+  brew tap caskroom/fonts
+  brew cask install ${fonts[@]}
 
   # link with alfred
   alfred
