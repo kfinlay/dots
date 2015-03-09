@@ -73,7 +73,6 @@ kfapps=(
 	eyetv
 	fission
 	github
-	gitx-rowanj
 	handbrake
 	hazel
 	hocus-focus
