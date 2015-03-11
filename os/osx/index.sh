@@ -35,13 +35,3 @@ fi
 # cleanup homebrew's cache
 brew cleanup --force -s
 rm -rf $(brew --cache)
-
-# Restored by mackup
-# # Symlink the profile
-# if [[ ! -e "$HOME/.bash_profile" ]]; then
-#   echo "symlinking: $osx/profile.sh => $HOME/.bash_profile"
-#   symlink "$osx/profile.sh" "$HOME/.bash_profile"
-#   source $HOME/.bash_profile
-# else
-#   echo "$HOME/.bash_profile already exists. remove and run again."
-# fi
