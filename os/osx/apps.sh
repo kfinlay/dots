@@ -89,6 +89,7 @@ kfapps=(
 	little-snitch
 	nsregextester
 	nvalt
+	noizio
 	ocenaudio
 	onepassword
 	pacifist
