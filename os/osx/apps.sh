@@ -70,6 +70,7 @@ kfapps=(
 	divvy
 	duet
 	dupeguru
+	eve
 	eyetv
 	fission
 	github
