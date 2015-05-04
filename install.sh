@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+set -eu
 
 # paths
 dirname=$(pwd)
@@ -5,8 +7,8 @@ lib="/usr/local/lib"
 bin="/usr/local/bin"
 
 # make in case they aren't already there
-mkdir -p $lib
-mkdir -p $bin
+sudo mkdir -p $lib
+sudo mkdir -p $bin
 
 # Copy the path
 sudo cp -R $dirname "$lib/"
