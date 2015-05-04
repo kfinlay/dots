@@ -9,7 +9,7 @@ fi
 
 # update brew packages
 brew update
-brew upgrade
+brew upgrade -all
 
 # cleanup
 brew cleanup
