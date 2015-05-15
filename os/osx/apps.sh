@@ -80,6 +80,7 @@ kfapps=(
 	imagealpha
 	imageoptim
 	integrity
+	jadengeller-helium
 	jbidwatcher
 	karabiner
 	key-codes
