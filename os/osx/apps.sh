@@ -89,6 +89,7 @@ kfapps=(
 	launchcontrol
 	launchy
 	little-snitch
+	loading
 	nsregextester
 	nvalt
 	noizio
