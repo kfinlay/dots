@@ -5,14 +5,21 @@
 set -e
 
 # Apps
-commonapps=(
+masapps=(
 	acorn
+	betterzip
+	cloudpull
+	kaleidoscope
+	onepassword
+	patterns
+	scrivener
+)
+commonapps=(
 	adobe-reader
 	betterzipql
 	bibdesk
 	box-sync
 	burn
-	caffeine
 	cartographica
 	dropbox
 	expandrive
@@ -21,7 +28,6 @@ commonapps=(
 	gdal-framework
 	google-chrome
 	iterm2
-	kaleidoscope
 	mactex
 	management-tools
 	matplotlib
@@ -58,7 +64,6 @@ kfapps=(
 	aviator
 	bartender
 	bettertouchtool
-	betterzip
 	bittorrent-sync
 	cakebrew
 	calibre
@@ -74,6 +79,7 @@ kfapps=(
 	eyetv
 	fission
 	github
+	gitup
 	handbrake
 	hazel
 	hocus-focus
@@ -94,11 +100,9 @@ kfapps=(
 	nvalt
 	noizio
 	ocenaudio
-	onepassword
 	pacifist
 	platypus
 	presentation
-	scrivener
 	seil
 	selfcontrol
 	shuttle
@@ -115,14 +119,13 @@ kfapps=(
 )
 kfmacproapps=(
 	backblaze-downloader
-	cloudpull
 )
 kfmacbookapps=(
 	nosleep
 	smcfancontrol
+	tripmode
 )
 
-# patterns - not available
 # parallels - not working
 	# ==> Downloading http://download.parallels.com/desktop/v9/update2.hotfix2/ParallelsDesktop-9.0.24237.1028877.dmg
 	# ######################################################################## 100.0%
