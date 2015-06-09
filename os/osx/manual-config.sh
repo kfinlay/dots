@@ -23,26 +23,26 @@ masapps=(
 
 # add login items
 loginapps=(
-	Alfred 2
+	Alfred-2
 	Amphetamine
 	Backblaze
 	Bartender
 	BetterTouchTool
-	BitTorrent Sync
-	Box Sync
+	BitTorrent-Sync
+	Box-Sync
 	CheatSheet
 	CloudPull
 	ControlPlane
-	Default Folder X Helper
+	Default-Folder-X-Helper
 	Dropbox
 	EVE
 	ExpanDrive
 	Flux
 	HocusFocus
 	Karabiner
-	Keyboard Maestro Engine
+	Keyboard-Maestro-Engine
 	Loading
-	Mindful Mynah
+	Mindful-Mynah
 	Noizio
 	Seil
 	Shuttle
@@ -54,33 +54,51 @@ loginapps=(
 
 # Allow apps to control computer: System Preferences > Security & Privacy > Privacy > Accessibility
 controlapps=(
-	Alfred 2
+	Alfred-2
 	BetterTouchTool
 	CheatSheet
 	Dropbox
 	EVE
 	HocusFocus
-	Keyboard Maestro
-	Keyboard Maestro Engine
+	Keyboard-Maestro
+	Keyboard-Maestro-Engine
 	Spectacle
 	TextExpander
-	TextExpander Helper
+	TextExpander-Helper
 )
 
 # Safari extensions
 safariexts=(
-	1Password: https://agilebits.com/extensions/mac/index.html
-	The Traktor
+	1Password:-https://agilebits.com/extensions/mac/index.html
+	The-Traktor
 	Translate
-	uBlock: https://www.ublock.org
-	Ultimate Status Bartender
+	uBlock:-https://www.ublock.org
+	Ultimate-Status-Bar
 )
 
 main() {
-	printf "Please install the following from the Mac App Store: ${masapps[@]}" 
-	# printf "Please add the following to login items: ${loginapps[@]}"
-	# printf "Please allow the following apps to control the computer: ${controlapps[@]}"
-	# printf "Please add the following Safari extensions: ${safariexts[@]}"
+	for app in "${masapps[@]}"
+	do
+		echo Please install the following from the Mac App Store: $app
+	done
+	echo
+	for app in "${loginapps[@]}"
+	do
+		echo Please add the following to login items: $app
+	done
+	echo
+	for app in "${controlapps[@]}"
+	do
+		echo Please allow the following apps to control the computer: $app
+	done
+	echo
+	for app in "${safariexts[@]}"
+	do
+		echo Please add the following Safari extensions: $app
+	done
+	echo
+	echo System Preferences
+	echo
 }
 
 main "$@"

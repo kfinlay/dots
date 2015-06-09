@@ -24,11 +24,11 @@ brew update && brew upgrade -all
 brew install coreutils
 
 # python installs
-# ScipySuperpack from https://github.com/fonnesbeck/ScipySuperpack
-	# installs Python 2.X
-curl -O https://raw.githubusercontent.com/fonnesbeck/ScipySuperpack/master/install_superpack.sh && sh install_superpack.sh
 # install Python 3.X
 brew install python3
+# ScipySuperpack from https://github.com/fonnesbeck/ScipySuperpack
+# requires choice of Python 2 or 3
+curl -L https://raw.github.com/fonnesbeck/ScipySuperpack/master/install_superpack.sh | sh
 # python tools
 pip install scrapy
 
@@ -84,7 +84,7 @@ brew linkapps
 brew install shellcheck
 
 # Install Oh My Zsh
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 	# install zsh-syntax-highlighting
 	mkdir -p "${HOME}/.oh-my-zsh/custom/plugins"

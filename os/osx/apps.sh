@@ -177,7 +177,7 @@ main() {
   model=$(ioreg -c "IOPlatformExpertDevice" | awk -F '"' '/model/ {print $4}')
   echo $model
   if [ "${model:0:6}" = "MacPro" ]; then
-    #brew cask install --appdir=$appdir ${kfapps[@]}
+    brew cask install --appdir=$appdir ${kfapps[@]}
     brew cask install --appdir=$appdir ${kfmacproapps[@]}
   fi
   if [ "${model:0:7}" = "MacBook" ]; then
