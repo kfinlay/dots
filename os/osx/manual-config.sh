@@ -49,6 +49,7 @@ loginapps=(
 	Spectacle
 	TextExpander
 	Tunnelblick
+	Turbo-Boost-Switcher
 	Ubersicht
 )
 

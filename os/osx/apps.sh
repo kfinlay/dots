@@ -124,6 +124,7 @@ kfmacbookapps=(
 	nosleep
 	smcfancontrol
 	tripmode
+	turbo-boost-switcher
 )
 
 # parallels - not working
