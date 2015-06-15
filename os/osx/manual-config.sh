@@ -100,6 +100,7 @@ main() {
 	echo
 	echo System Preferences
 	echo
+	echo Please activate FileVault encryption
 }
 
 main "$@"
