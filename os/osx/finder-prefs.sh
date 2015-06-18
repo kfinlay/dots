@@ -1,5 +1,5 @@
 ###############################################################################
-# Finder defaults: change sidebar list
+# Finder defaults: change sidebar and dock lists
 ###############################################################################
 
 if [ "$USER" = "kfinlay" ]
@@ -25,6 +25,19 @@ if [ "$USER" = "kfinlay" ]
 
 	./Change_Sidebar_List.py list
 	
+	if test ! $(which dockutil); then
+	  echo "Installing dockutil..."
+	  brew install dockutil
+	fi
+
+	dockutil --list
+	dockutil --remove all
+	dockutil --add '/Applications/Sublime Text.app'
+	dockutil --add '/Applications/TextWrangler.app'
+	dockutil --add '/Applications/System Preferences.app'
+	dockutil --add '/Users/kfinlay/Downloads'
+	dockutil --list
+
 fi
 
 exit 0
