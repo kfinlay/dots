@@ -31,6 +31,7 @@ if [ "$USER" = "kfinlay" ]
 	fi
 
 	dockutil --list
+	# defaults delete com.apple.dock
 	dockutil --remove all
 	dockutil --add '/Applications/Sublime Text.app'
 	dockutil --add '/Applications/TextWrangler.app'
