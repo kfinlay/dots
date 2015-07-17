@@ -68,6 +68,7 @@ kfapps=(
 	cakebrew
 	calibre
 	cheatsheet
+	citrix-receiver
 	controlplane
 	dash
 	default-folder-x
