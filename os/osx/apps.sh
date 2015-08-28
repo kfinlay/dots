@@ -69,6 +69,7 @@ kfapps=(
 	calibre
 	cheatsheet
 	citrix-receiver
+	commander-one
 	controlplane
 	dash
 	default-folder-x
