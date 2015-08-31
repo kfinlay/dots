@@ -16,6 +16,7 @@ osx="$os/osx"
 
 # Run each program
 # gem install xcode-installer
+sh "$osx/security.sh"
 sh "$osx/binaries.sh"
 sh "$osx/apps.sh"
 sh "$osx/defaults.sh"
