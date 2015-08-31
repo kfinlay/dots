@@ -1024,10 +1024,6 @@ echo ""
 echo "Skim settings"
 defaults write -app Skim SKAutoReloadFileUpdate -boolean true
 
-echo ""
-echo "Privacy settings for OS X"
-curl -O https://fix-macosx.com/fix-macosx.py && /usr/bin/python fix-macosx.py
-
 ###############################################################################
 # Kill affected applications
 ###############################################################################
