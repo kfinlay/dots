@@ -76,7 +76,7 @@ brew install homebrew/dupes/grep
 brew install duti git gnuplot mackup terminal-notifier translate-shell wget
 
 # Install the binaries
-brew install ack fish onepass rename trash tree
+brew install ack fish onepass rename the_silver_searcher trash tree
 # brew install ffmpeg gcc graphicsmagick hub mongo node pandoc sshfs webkit2png zeromq zopfli
 brew linkapps
 
