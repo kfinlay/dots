@@ -76,8 +76,8 @@ brew install homebrew/dupes/grep
 brew install duti git gnuplot mackup terminal-notifier translate-shell wget
 
 # Install the binaries
-brew install ack fish onepass rename the_silver_searcher trash tree
-# brew install ffmpeg gcc graphicsmagick hub mongo node pandoc sshfs webkit2png zeromq zopfli
+brew install ack fish onepass pandoc pandoc-citeproc rename the_silver_searcher trash tree
+# brew install ffmpeg gcc graphicsmagick hub mongo node sshfs webkit2png zeromq zopfli
 brew linkapps
 
 # Install linters (chktex, htmltidy, and json built into ST3)
