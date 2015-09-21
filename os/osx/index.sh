@@ -14,8 +14,10 @@ fi
 # paths
 osx="$os/osx"
 
-# Run each program
-# gem install xcode-installer
+# Run Mike McQuaid's strap script to install XCode CLTs, install Homebrew et al., set some good security settings
+curl -O https://raw.githubusercontent.com/mikemcquaid/strap/master/bin/strap.sh && /usr/bin/bash strap.sh
+
+# Run each dots program
 sh "$osx/security.sh"
 sh "$osx/binaries.sh"
 sh "$osx/apps.sh"
