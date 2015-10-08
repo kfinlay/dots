@@ -6,13 +6,28 @@ set -e
 
 # Apps
 masapps=(
-	acorn
-	betterzip
-	cloudpull
-	kaleidoscope
-	onepassword
-	patterns
-	scrivener
+	529456740 # CheatSheet
+	414568915 # Key Codes
+	587512244 # Kaleidoscope
+	409183694 # Keynote
+	492081694 # Houdini
+	405219581 # PDF Toolkit
+	418889511 # Scrivener
+	411246225 # Caffeine
+	634108295 # Acorn
+	937984704 # Amphetamine
+	425424353 # The Unarchiver
+	443987910 # 1Password
+	429449079 # Patterns
+	635758264 # Calca
+	880001334 # Reeder
+	409203825 # Numbers
+	409201541 # Pages
+	867299399 # OmniFocus
+	415086549 # BetterZip
+	928871589 # Noizio
+	403624960 # PDFpen
+	503981565 # Mindful Mynah
 )
 commonapps=(
 	adobe-reader
@@ -163,6 +178,9 @@ main() {
   # Ensure homebrew is installed
   homebrew
 
+  # Ensure mas cli is installed
+  mascli
+
   # Install homebrew-cask
   echo "Installing cask..."
   brew install caskroom/cask/brew-cask
@@ -176,6 +194,7 @@ main() {
 
   # install apps
   echo "Installing apps..."
+  mas install ${masapps[@]}
   brew cask install --appdir=$appdir ${commonapps[@]}
   # Identify machine
   model=$(ioreg -c "IOPlatformExpertDevice" | awk -F '"' '/model/ {print $4}')
@@ -205,6 +224,13 @@ homebrew() {
   if test ! $(which brew); then
     echo "Installing homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+}
+
+mascli() {
+  if test ! $(which mas); then
+    echo "Installing mas..."
+    brew install argon/mas/mas
   fi
 }
 
