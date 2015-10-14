@@ -92,6 +92,7 @@ kfapps=(
 	divvy
 	duet
 	dupeguru
+	etrecheck
 	eve
 	eyetv
 	fission
