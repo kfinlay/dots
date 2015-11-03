@@ -90,6 +90,7 @@ kfapps=(
 	default-folder-x
 	disk-inventory-x
 	divvy
+	dockertoolbox
 	duet
 	dupeguru
 	etrecheck
