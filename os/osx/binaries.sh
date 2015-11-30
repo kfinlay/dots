@@ -60,6 +60,7 @@ ruby-install ruby 2.1
 #gem install jekyll
 #gem install kramdown
 #gem install rails
+gem install nokogiri # required for Titler service
 #echo 'rails' >> "~/.rbenv/default-gems"
 #which gem
 #gem update
@@ -75,9 +76,12 @@ brew install homebrew/dupes/grep
 # Binaries I use
 brew install duti git gnuplot mackup terminal-notifier translate-shell wget
 
+# Binaries for audio and podcasts
+brew install ffmpeg --with-fdk-aac
+
 # Install the binaries
 brew install ack fish onepass pandoc pandoc-citeproc rename the_silver_searcher trash tree
-# brew install ffmpeg gcc graphicsmagick hub mongo node sshfs webkit2png zeromq zopfli
+# brew install gcc graphicsmagick hub mongo node sshfs webkit2png zeromq zopfli
 brew linkapps
 
 # Install linters (chktex, htmltidy, and json built into ST3)
