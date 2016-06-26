@@ -25,7 +25,7 @@ then
 	done
 	for EXT in ado do
 	do
-		duti -s com.stata.stata13 $EXT all
+		duti -s com.stata.stata14 $EXT all
 	done
 	for EXT in avi wav
 	do

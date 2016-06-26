@@ -15,7 +15,6 @@ masapps=(
 	418889511 # Scrivener
 	411246225 # Caffeine
 	634108295 # Acorn
-	937984704 # Amphetamine
 	425424353 # The Unarchiver
 	443987910 # 1Password
 	429449079 # Patterns
@@ -29,6 +28,7 @@ masapps=(
 	403624960 # PDFpen
 	503981565 # Mindful Mynah
 )
+# 937984704 # Amphetamine
 commonapps=(
 	adobe-reader
 	betterzipql
@@ -79,7 +79,6 @@ kfapps=(
 	aviator
 	bartender
 	bettertouchtool
-	bittorrent-sync
 	cakebrew
 	calibre
 	cheatsheet
@@ -90,12 +89,10 @@ kfapps=(
 	default-folder-x
 	disk-inventory-x
 	divvy
-	dockertoolbox
 	duet
 	dupeguru
 	etrecheck
 	eve
-	eyetv
 	fission
 	github
 	gitup
@@ -127,20 +124,24 @@ kfapps=(
 	selfcontrol
 	shuttle
 	sidestep
-	slack
 	spectacle
 	splitshow
 	textexpander
-	timemachinescheduler
 	tower
-	transmission
 	tunnelblick
 	xld
 )
+# bittorrent-sync
+# dockertoolbox
+# eyetv
+# slack
+# timemachinescheduler
+# transmission
 kfmacproapps=(
 	backblaze-downloader
 )
 kfmacbookapps=(
+	backblaze-downloader
 	nosleep
 	smcfancontrol
 	tripmode
@@ -184,12 +185,12 @@ main() {
   mascli
 
   # Install homebrew-cask
-  echo "Installing cask..."
-  brew install caskroom/cask/brew-cask
+  # echo "Installing cask..."
+  # brew install caskroom/cask/brew-cask
 
   # Set caskroom permissions
-  mkdir -p /opt/homebrew-cask/Caskroom
-  sudo chown -R ${USER}:staff /opt/homebrew-cask
+  # mkdir -p /opt/homebrew-cask/Caskroom
+  # sudo chown -R ${USER}:staff /opt/homebrew-cask
 
   # Tap alternative versions
   brew tap caskroom/versions
@@ -215,9 +216,6 @@ main() {
   brew tap caskroom/fonts
   brew cask install ${fonts[@]}
 
-  # link with alfred
-  alfred
-
   # cleanup
   cleanup
 }
@@ -225,19 +223,15 @@ main() {
 homebrew() {
   if test ! $(which brew); then
     echo "Installing homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 }
 
 mascli() {
   if test ! $(which mas); then
     echo "Installing mas..."
-    brew install argon/mas/mas
+    brew install mas
   fi
-}
-
-alfred() {
-  brew cask alfred link
 }
 
 cleanup() {

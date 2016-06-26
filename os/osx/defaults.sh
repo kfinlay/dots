@@ -154,7 +154,7 @@ then
 	if [ "$admin" = "yes" ]
 	then
 		sudo pmset -a displaysleep 20 disksleep 30 sleep 90 womp 1
-		sudo pmset -a halfdim 1	
+		sudo pmset -a halfdim 1
 	else
 		pmset -a displaysleep 15 disksleep 30 sleep 90 womp 1
 		pmset -a halfdim 1
@@ -181,9 +181,9 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # echo "Never go into computer sleep mode"
 # systemsetup -setcomputersleep Off > /dev/null
 
-echo ""
-echo "Check for software updates daily, not just once per week"
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+# echo ""
+# echo "Check for software updates daily, not just once per week"
+# defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # characters
 	# Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
@@ -243,7 +243,7 @@ then
 	rm -rf $HOME/Downloads/*
 	# Remove files that determine the view options for the folder
 	sudo find / -name ".DS_Store" -depth -exec rm {} \;
-	
+
 	echo ""
 	echo "Hide the Time Machine, Volume, User, and Bluetooth icons"
 	for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
@@ -480,15 +480,15 @@ then
 	echo ""
 	echo "Finder: show hidden files by default"
 	defaults write com.apple.finder AppleShowAllFiles -bool true
-	
+
 	echo ""
 	echo "Finder: show all filename extensions"
 	defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 	echo ""
-	echo Disable the warning when changing a file extension
+	echo "Disable the warning when changing a file extension"
 	defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-	
+
 	echo ""
 	echo "Disable the warning before emptying the Trash"
 	defaults write com.apple.finder WarnOnEmptyTrash -bool false
@@ -612,7 +612,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 	echo "Dont group windows by application in Mission Control"
 	# (i.e. use the old Exposé behavior instead)
 	defaults write com.apple.dock expose-group-by-app -bool false
-	
+
 	echo ""
 	echo "Speeding up Mission Control animations and grouping windows by application"
 	defaults write com.apple.dock expose-animation-duration -float 0.1
@@ -624,7 +624,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 	# This is only really useful when setting up a new Mac, or if you don't use
 	# the Dock to launch apps.
 	defaults write com.apple.dock persistent-apps -array
-	
+
 	echo ""
 	echo "Remove the auto-hiding Dock delay"
 	defaults write com.apple.dock autohide-delay -int 0
@@ -653,7 +653,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 	echo ""
 	echo "Dock on the right"
 	defaults write com.apple.dock orientation -string "right"
-	
+
 	echo ""
 	echo "Dont animate opening applications from the Dock"
 	defaults write com.apple.dock launchanim -bool false
@@ -665,7 +665,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 	echo ""
 	echo "Setting the icon size of Dock items to 48 pixels"
 	defaults write com.apple.dock tilesize -float 48
-	
+
 	echo ""
 	echo "Setting Dock to auto-hide and removing the auto-hiding delay"
 	defaults write com.apple.dock autohide -bool true
@@ -683,7 +683,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 	echo ""
 	echo "Show indicator lights for open applications in the Dock"
 	defaults write com.apple.dock show-process-indicators -bool true
-	
+
 # echo Reset Launchpad
 # find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 
@@ -917,13 +917,13 @@ then
 	echo ""
 	echo "Enable Safari's debug menu"
 	defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-		
+
 	echo ""
 	echo "Enable the Develop menu and the Web Inspector in Safari"
 	defaults write com.apple.Safari IncludeDevelopMenu -bool true
 	defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 	defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-	
+
 	echo ""
 	echo "Show full URL in Safari location box"
 	defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true

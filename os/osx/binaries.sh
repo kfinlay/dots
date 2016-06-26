@@ -14,7 +14,7 @@ fi
 # Check for Homebrew
 if test ! $(which brew); then
   echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Update homebrew
@@ -36,9 +36,9 @@ pip install scrapy
 # or see https://gorails.com/setup/osx/10.10-yosemite
 brew install gdbm libffi libyaml openssl readline
 brew install gcc48
-brew install chruby
-brew install ruby-install
-ruby-install ruby 2.1
+# brew install chruby
+# brew install ruby-install
+# ruby-install ruby 2.1
 # #add to profile
 # source /usr/local/share/chruby/chruby.sh
 # source /usr/local/share/chruby/auto.sh
@@ -88,7 +88,7 @@ brew linkapps
 brew install shellcheck
 
 # Install Oh My Zsh
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 	# install zsh-syntax-highlighting
 	mkdir -p "${HOME}/.oh-my-zsh/custom/plugins"
