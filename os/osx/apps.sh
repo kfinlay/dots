@@ -108,6 +108,7 @@ kfapps=(
 	key-codes
 	keyboard-maestro
 	kismac
+	ksdiff
 	launchcontrol
 	launchy
 	little-snitch
