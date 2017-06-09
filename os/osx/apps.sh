@@ -171,7 +171,7 @@ homebrew() {
 
 homebrew_update() {
   echo "Updating homebrew..."
-  brew update && brew upgrade -all && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+  brew update && brew upgrade -all && brew cleanup && brew cask cleanup
 }
 
 mascli() {
