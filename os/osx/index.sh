@@ -18,7 +18,7 @@ osx="$os/osx"
 softwareupdate --install --all
 
 # Run Mike McQuaid's strap script to install XCode CLTs, install Homebrew et al., set some good security settings
-curl -O https://raw.githubusercontent.com/mikemcquaid/strap/master/bin/strap.sh && /usr/bin/bash strap.sh
+curl -O https://raw.githubusercontent.com/mikemcquaid/strap/master/bin/strap.sh && /bin/bash strap.sh
 
 # Run each dots program
 sh "$osx/security.sh"
