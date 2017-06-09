@@ -3,6 +3,8 @@
 # Privacy service manager settings
 ###############################################################################
 
+set -eu
+
 if [ "$USER" = "kfinlay" ]
 then
 	if test ! $(which app_lookup.py); then

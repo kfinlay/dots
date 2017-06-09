@@ -1,3 +1,10 @@
+#!/usr/bin/env bash
+#
+# Security settings
+#
+
+set -eu
+
 ###############################################################################
 # Security settings, see https://github.com/drduh/OS-X-Yosemite-Security-and-Privacy-Guide
 ###############################################################################

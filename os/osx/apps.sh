@@ -3,7 +3,7 @@
 # Application installer (via mascli and brew cask)
 #
 
-set -e
+set -eu
 
 # Apps
 masapps=(
@@ -12,7 +12,6 @@ masapps=(
   587512244  # Kaleidoscope (2.2.0)
   409183694  # Keynote (6.6.2)
   405219581  # PDF Toolkit (1.8)
-  634108295  # Acorn (4.5.8)
   411246225  # Caffeine (1.1.1)
   429449079  # Patterns (1.1.2)
   442168834  # SiteSucker (2.10.3)
@@ -29,8 +28,10 @@ masapps=(
   433471800  # Brisk (1.2.2)
   503981565  # Mindful Mynah (1.9.5)
   418889511  # Scrivener
-  492081694  # Houdini
 )
+  # # Errors with these:
+  # 634108295  # Acorn (4.5.8)
+  # 492081694  # Houdini
 kfapps=(
   1password-beta
   adobe-reader
@@ -134,7 +135,11 @@ main() {
   echo "Installing apps..."
 
   # install mas apps
-  mas install ${masapps[@]}
+  if mas install ${masapps[@]} ; then
+      echo "MAS installs succeeded"
+  else
+      echo "MAS installs failed, at least in part"
+  fi
 
   # Identify machine
   model=$(ioreg -c "IOPlatformExpertDevice" | awk -F '"' '/model/ {print $4}')

@@ -3,7 +3,7 @@
 # Binary installer
 #
 
-set -e
+set -eu
 
 # binaries
 binarylist=(
@@ -11,11 +11,13 @@ binarylist=(
   gcc                   # gcc
   git                   # newest git
   gnuplot               # gnuplot
+  grep                  # grep
   imagemagick           # image util
   lame                  # mp3 enc
   mackup                # mackup
   mas                   # app store cli
   mpv                   # video player
+  ffmpeg --with-fdk-aac # ffmpeg with custom
   onepass               # 1p wrapper
   openssl               # openssl
   pandoc                # pandoc
@@ -60,14 +62,6 @@ main() {
 
   # brews
   brew install ${binarylist[@]}
-
-  # custom brews
-    # Install more recent versions of some OS X tools
-    brew tap homebrew/dupes
-    brew install homebrew/dupes/grep
-
-    # Binaries for audio and podcasts
-    brew install ffmpeg --with-fdk-aac
 
   # # python packages with anaconda pip
   # if test ! $(which brew); then
