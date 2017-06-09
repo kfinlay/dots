@@ -39,16 +39,13 @@ binarylist=(
   readline              #
   rename                #
   ack                   #
-  gcc48                 #
-)
+  gcc48)                 #
 
 # piplist=(
-#   mackup
-# )
+#   mackup)
 
-gemlist=(
-  nokogiri              # required for Titler service
-)
+# gemlist=(
+#   nokogiri)              # required for Titler service
 
 main() {
   # check if xcode cli installed

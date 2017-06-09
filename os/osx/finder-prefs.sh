@@ -13,7 +13,7 @@ if [ "$USER" = "kfinlay" ]
 
 	./Change_Sidebar_List.py list
 
-	for SIDEBARITEM in "HOMEDIR/Library" "HOMEDIR" "HOMEDIR/Dropbox/projects" "HOMEDIR/git" "HOMEDIR/Dropbox"
+	for SIDEBARITEM in "HOMEDIR/Library" "HOMEDIR" "HOMEDIR/Dropbox/projects" "HOMEDIR/git" "HOMEDIR/Box Sync" "HOMEDIR/Dropbox"
 	do
 		./Change_Sidebar_List.py first $SIDEBARITEM
 	done
@@ -24,7 +24,7 @@ if [ "$USER" = "kfinlay" ]
 	done
 
 	./Change_Sidebar_List.py list
-	
+
 	if test ! $(which dockutil); then
 	  echo "Installing dockutil..."
 	  brew install dockutil

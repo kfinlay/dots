@@ -23,7 +23,7 @@ sh "$osx/binaries.sh"
 sh "$osx/apps.sh"
 # sh "$osx/defaults.sh"
 # sh "$osx/duti.sh"
-sh "$osx/privacy.sh"
+# sh "$osx/privacy.sh" # doesn't work anymore because of SIP protection
 
 # prompt for private script, run, then delete
 read -p "Please enter the URL for your private bash install script (or enter for none)?" privurl

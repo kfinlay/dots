@@ -27,11 +27,11 @@ masapps=(
   403624960  # PDFpen (5.9.9)
   433471800  # Brisk (1.2.2)
   503981565  # Mindful Mynah (1.9.5)
-  418889511  # Scrivener
-)
+  418889511)  # Scrivener
   # # Errors with these:
   # 634108295  # Acorn (4.5.8)
   # 492081694  # Houdini
+
 kfapps=(
   1password-beta
   adobe-reader
@@ -93,22 +93,20 @@ kfapps=(
   tower
   ubersicht
   vlc
-  webpquicklook
-)
+  webpquicklook)
+
 kfmacproapps=(
-  backblaze
-)
+  backblaze)
+
 kfmacbookapps=(
   nosleep
   macs-fan-control
-  turbo-boost-switcher
-)
+  turbo-boost-switcher)
 
 # fonts
 fonts=(
   font-inconsolata
-  font-source-code-pro
-)
+  font-source-code-pro)
 
 main() {
   # Ensure homebrew is installed
