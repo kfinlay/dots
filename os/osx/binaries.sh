@@ -74,7 +74,7 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
 # Binaries I use
-brew install duti git gnuplot mackup terminal-notifier translate-shell wget
+brew install duti git gnuplot mackup sshuttle terminal-notifier translate-shell wget
 
 # Binaries for audio and podcasts
 brew install ffmpeg --with-fdk-aac
