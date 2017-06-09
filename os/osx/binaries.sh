@@ -77,8 +77,8 @@ main() {
   # export PATH=/usr/local/anaconda3/bin:"$PATH"
   # pip install ${piplist[@]}
 
-  # ruby gems with os version of ruby
-  gem install ${gemlist[@]}
+  # # ruby gems with os version of ruby
+  # gem install ${gemlist[@]}
 
   # cleanup
   cleanup
