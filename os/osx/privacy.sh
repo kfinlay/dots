@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ###############################################################################
 # Privacy service manager settings
 ###############################################################################
@@ -14,27 +15,27 @@ then
 	fi
 	# to get bundle ID: app_lookup.py safari
 	# contacts
-	for BID in com.alfredapp.Alfred com.smileonmymac.textexpander
+	for BID in com.alfredapp.Alfred
 	do
 		privacy_services_manager.py add contacts $BID
 	done
 	# accessibility
-	for BID in com.alfredapp.Alfred com.hegenberg.BetterTouchTool cheatsheet org.pqrs.Karabiner-AXNotifier com.stairways.keyboardmaestro.engine com.stairways.keyboardmaestro com.divisiblebyzero.Spectacle com.smileonmymac.textexpander.helper com.smileonmymac.textexpander
+	for BID in com.alfredapp.Alfred com.hegenberg.BetterTouchTool cheatsheet com.stclairsoft.DefaultFolderX5 com.dropbox.dropbox com.togo.hotkeyEVE org.pqrs.Karabiner-AXNotifier com.stairways.keyboardmaestro.engine com.stairways.keyboardmaestro com.divisiblebyzero.Spectacle com.fournova.Tower2
 	do
 		privacy_services_manager.py add accessibility $BID
 	done
-	# calendar
-	for BID in com.omnigroup.OmniFocus2.MacAppStore
-	do
-		privacy_services_manager.py add calendar $BID
-	done
+	# # calendar
+	# for BID in com.omnigroup.OmniFocus2.MacAppStore
+	# do
+	# 	privacy_services_manager.py add calendar $BID
+	# done
 	# reminders
-	for BID in com.alfredapp.Alfred com.omnigroup.OmniFocus2.MacAppStore
+	for BID in com.alfredapp.Alfred # com.omnigroup.OmniFocus2.MacAppStore
 	do
 		privacy_services_manager.py add reminders $BID
 	done
 	# location
-	for BID in org.herf.Flux com.apple.reminders weather com.apple.Maps
+	for BID in org.herf.Flux com.apple.reminders weather com.apple.Maps com.tracesOf.Uebersicht speedtest
 	do
 		privacy_services_manager.py add location $BID
 	done

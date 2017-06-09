@@ -14,16 +14,8 @@ fi
 # paths
 osx="$os/osx"
 
-# Under El Capitan, must disable SIP to create /usr/local
-# if [[ "$(csrutil status)" = "System Integrity Protection status: enabled." ]]; then
-#   echo "Please restart and disable System Integrity Protection:"
-#   echo "https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/El_Capitan_and_Homebrew.md"
-#   exit 0
-# fi
-# if [ ! -d "/usr/local" ]; then
-#   sudo mkdir /usr/local && sudo chflags norestricted /usr/local
-# fi
-# sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+# make sure system is up-to-date
+softwareupdate --install --all
 
 # Run Mike McQuaid's strap script to install XCode CLTs, install Homebrew et al., set some good security settings
 curl -O https://raw.githubusercontent.com/mikemcquaid/strap/master/bin/strap.sh && /usr/bin/bash strap.sh
@@ -32,8 +24,8 @@ curl -O https://raw.githubusercontent.com/mikemcquaid/strap/master/bin/strap.sh 
 sh "$osx/security.sh"
 sh "$osx/binaries.sh"
 sh "$osx/apps.sh"
-sh "$osx/defaults.sh"
-sh "$osx/duti.sh"
+# sh "$osx/defaults.sh"
+# sh "$osx/duti.sh"
 sh "$osx/privacy.sh"
 
 # prompt for private script, run, then delete

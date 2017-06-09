@@ -1,186 +1,120 @@
+#!/usr/bin/env bash
 #
-# Application installer (via brew-cask)
+# Application installer (via mascli and brew cask)
 #
 
 set -e
 
 # Apps
 masapps=(
-	529456740 # CheatSheet
-	414568915 # Key Codes
-	587512244 # Kaleidoscope
-	409183694 # Keynote
-	492081694 # Houdini
-	405219581 # PDF Toolkit
-	418889511 # Scrivener
-	411246225 # Caffeine
-	634108295 # Acorn
-	425424353 # The Unarchiver
-	443987910 # 1Password
-	429449079 # Patterns
-	635758264 # Calca
-	880001334 # Reeder
-	409203825 # Numbers
-	409201541 # Pages
-	867299399 # OmniFocus
-	415086549 # BetterZip
-	928871589 # Noizio
-	403624960 # PDFpen
-	503981565 # Mindful Mynah
+  529456740  # CheatSheet (1.0.3)
+  414568915  # Key Codes (2.1)
+  587512244  # Kaleidoscope (2.2.0)
+  409183694  # Keynote (6.6.2)
+  405219581  # PDF Toolkit (1.8)
+  634108295  # Acorn (4.5.8)
+  411246225  # Caffeine (1.1.1)
+  429449079  # Patterns (1.1.2)
+  442168834  # SiteSucker (2.10.3)
+  635758264  # Calca (1.3)
+  880001334  # Reeder (3.0.3)
+  409201541  # Pages (5.6.2)
+  404458553  # OmniGraffle 5 (5.4.4)
+  415086549  # BetterZip (2.3.3)
+  404010395  # TextWrangler (5.5.2)
+  409203825  # Numbers (3.6.2)
+  928871589  # Noizio (1.5)
+  1153157709 # Speedtest (1.3)
+  403624960  # PDFpen (5.9.9)
+  433471800  # Brisk (1.2.2)
+  503981565  # Mindful Mynah (1.9.5)
+  418889511  # Scrivener
+  492081694  # Houdini
 )
-# 937984704 # Amphetamine
-commonapps=(
-	adobe-reader
-	betterzipql
-	bibdesk
-	box-sync
-	burn
-	cartographica
-	dropbox
-	expandrive
-	firefox
-	flux
-	gdal-framework
-	google-chrome
-	iterm2
-	mactex
-	management-tools
-	matplotlib
-	octave
-	omnigraffle
-	privacy-services-manager
-	qgis
-	qlcolorcode
-	qlmarkdown
-	qlprettypatch
-	qlstephen
-	quicklook-csv
-	quicklook-json
-	r
-	rstudio
-	sitesucker
-	sketchup
-	skim
-	skype
-	stattransfer11
-	sublime-text3
-	superduper
-	suspicious-package
-	textwrangler
-	ubersicht
-	unrarx
-	vlc
-	webp-quicklook
-)
-# gdal-framework and matplotlib are necessary for qgis
 kfapps=(
-	alfred
-	all2mp3
-	aviator
-	bartender
-	bettertouchtool
-	cakebrew
-	calibre
-	cheatsheet
-	citrix-receiver
-	commander-one
-	controlplane
-	dash
-	default-folder-x
-	disk-inventory-x
-	divvy
-	duet
-	dupeguru
-	etrecheck
-	eve
-	fission
-	github
-	gitup
-	handbrake
-	hazel
-	hocus-focus
-	imagealpha
-	imageoptim
-	integrity
-	jadengeller-helium
-	jbidwatcher
-	karabiner
-	key-codes
-	keyboard-maestro
-	kismac
-	ksdiff
-	launchcontrol
-	launchy
-	little-snitch
-	loading
-	mpv
-	nsregextester
-	nvalt
-	noizio
-	ocenaudio
-	pacifist
-	platypus
-	presentation
-	seil
-	selfcontrol
-	shuttle
-	sidestep
-	spectacle
-	splitshow
-	textexpander
-	tower
-	tunnelblick
-	xld
+  1password-beta
+  adobe-reader
+  anaconda
+  backblaze-downloader
+  bartender
+  bettertouchtool
+  betterzipql
+  bibdesk
+  box-sync
+  cartographica
+  citrix-receiver
+  default-folder-x
+  disk-inventory-x
+  dropbox
+  duet
+  dupeguru
+  eve
+  firefox
+  fission
+  flux
+  gdal-framework
+  gfxcardstatus
+  google-chrome
+  handbrake
+  hocus-focus
+  imagealpha
+  imageoptim
+  integrity
+  iterm2-beta
+  jadengeller-helium
+  karabiner
+  keyboard-maestro
+  ksdiff
+  little-snitch
+  loading
+  macdown
+  mactex
+  pacifist
+  qlcolorcode
+  qlmarkdown
+  qlprettypatch
+  qlstephen
+  quicklook-csv
+  quicklook-json
+  rstudio
+  securid
+  seil
+  selfcontrol
+  shuttle
+  skim
+  skype
+  spectacle
+  sqlitebrowser
+  sublime-text
+  superduper
+  suspicious-package
+  textwrangler
+  tower
+  ubersicht
+  vlc
+  webpquicklook
 )
-# bittorrent-sync
-# dockertoolbox
-# eyetv
-# slack
-# timemachinescheduler
-# transmission
 kfmacproapps=(
-	backblaze-downloader
+  backblaze
 )
 kfmacbookapps=(
-	backblaze-downloader
-	nosleep
-	smcfancontrol
-	tripmode
-	turbo-boost-switcher
+  nosleep
+  macs-fan-control
+  turbo-boost-switcher
 )
-
-# parallels - not working
-	# ==> Downloading http://download.parallels.com/desktop/v9/update2.hotfix2/ParallelsDesktop-9.0.24237.1028877.dmg
-	# ######################################################################## 100.0%
-	# ==> Running installer for parallels; your password may be necessary.
-	# ==> Package installers may write to any location; options such as --appdir are ignored.
-	# ==> installer: Package name is Parallels Desktop
-	# ==> installer: Installing at base path /
-	# ==> installer: The install failed (The Installer encountered an error that caused the installation to fail. Contact the software
-	# Error: Command failed to execute!
-	#
-	# ==> Failed command:
-	# ["/usr/bin/sudo", "-E", "--", "/usr/sbin/installer", "-pkg", "#<Pathname:/opt/homebrew-cask/Caskroom/parallels/9.0.24237.1028877/Install.mpkg>", "-target", "/"]
-	#
-	# ==> Output of failed command:
-	# installer: Package name is Parallels Desktop
-	# installer: Installing at base path /
-	# installer: The install failed (The Installer encountered an error that caused the installation to fail. Contact the software manufacturer for assistance.)
 
 # fonts
 fonts=(
   font-inconsolata
   font-source-code-pro
 )
-# font-m-plus
-# font-clear-sans
-
-# Specify the location of the apps
-appdir="/Applications"
 
 main() {
   # Ensure homebrew is installed
   homebrew
+
+  # update homebrew
+  homebrew_update
 
   # Ensure mas cli is installed
   mascli
@@ -198,21 +132,28 @@ main() {
 
   # install apps
   echo "Installing apps..."
+
+  # install mas apps
   mas install ${masapps[@]}
-  brew cask install --appdir=$appdir ${commonapps[@]}
+
   # Identify machine
   model=$(ioreg -c "IOPlatformExpertDevice" | awk -F '"' '/model/ {print $4}')
-  echo $model
+  echo "$model"
   if [ "${model:0:6}" = "MacPro" ]; then
-    brew cask install --appdir=$appdir ${kfapps[@]}
-    brew cask install --appdir=$appdir ${kfmacproapps[@]}
+    brew cask install ${kfapps[@]}
+    brew cask install ${kfmacproapps[@]}
+  fi
+  if [ "${model:0:7}" = "Macmini" ]; then
+    brew cask install ${kfapps[@]}
+    brew cask install ${kfmacproapps[@]}
   fi
   if [ "${model:0:7}" = "MacBook" ]; then
-    brew cask install --appdir=$appdir ${kfapps[@]}
-    brew cask install --appdir=$appdir ${kfmacbookapps[@]}
+    brew cask install ${kfapps[@]}
+    brew cask install ${kfmacbookapps[@]}
+  echo
   fi
 
-  install fonts
+  # install fonts
   echo "Installing fonts..."
   brew tap caskroom/fonts
   brew cask install ${fonts[@]}
@@ -226,6 +167,11 @@ homebrew() {
     echo "Installing homebrew..."
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
+}
+
+homebrew_update() {
+  echo "Updating homebrew..."
+  brew update && brew upgrade -all && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 }
 
 mascli() {
