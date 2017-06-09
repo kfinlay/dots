@@ -19,27 +19,27 @@ then
 	# contacts
 	for BID in com.alfredapp.Alfred
 	do
-		privacy_services_manager.py add contacts $BID
+		sudo privacy_services_manager.py --user "kfinlay" add contacts $BID
 	done
 	# accessibility
-	for BID in com.alfredapp.Alfred com.hegenberg.BetterTouchTool cheatsheet com.stclairsoft.DefaultFolderX5 com.dropbox.dropbox com.togo.hotkeyEVE org.pqrs.Karabiner-AXNotifier com.stairways.keyboardmaestro.engine com.stairways.keyboardmaestro com.divisiblebyzero.Spectacle com.fournova.Tower2
+	for BID in com.runningwithcrayons.Alfred-3 com.hegenberg.BetterTouchTool com.mediaatelier.CheatSheet com.stclairsoft.DefaultFolderX5 com.getdropbox.dropbox com.togo.hotkeyEVE org.pqrs.Karabiner-AXNotifier com.stairways.keyboardmaestro.engine com.stairways.keyboardmaestro com.stairways.keyboardmaestro.editor com.divisiblebyzero.Spectacle com.fournova.Tower2
 	do
-		privacy_services_manager.py add accessibility $BID
+		sudo privacy_services_manager.py --user "kfinlay" add accessibility $BID
 	done
 	# # calendar
 	# for BID in com.omnigroup.OmniFocus2.MacAppStore
 	# do
-	# 	privacy_services_manager.py add calendar $BID
+	# 	sudo privacy_services_manager.py --user "kfinlay" add calendar $BID
 	# done
 	# reminders
 	for BID in com.alfredapp.Alfred # com.omnigroup.OmniFocus2.MacAppStore
 	do
-		privacy_services_manager.py add reminders $BID
+		sudo privacy_services_manager.py --user "kfinlay" add reminders $BID
 	done
 	# location
-	for BID in org.herf.Flux com.apple.reminders weather com.apple.Maps com.tracesOf.Uebersicht speedtest
+	for BID in org.herf.Flux com.apple.reminders weather com.apple.Maps tracesOf.Uebersicht speedtest
 	do
-		privacy_services_manager.py add location $BID
+		sudo privacy_services_manager.py --user "kfinlay" add location $BID
 	done
 fi
 
