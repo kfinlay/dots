@@ -17,7 +17,7 @@ then
 	fi
 	# to get bundle ID: app_lookup.py safari
 	# contacts
-	for BID in com.alfredapp.Alfred
+	for BID in com.runningwithcrayons.Alfred-3
 	do
 		sudo privacy_services_manager.py --user "kfinlay" add contacts $BID
 	done
@@ -32,12 +32,12 @@ then
 	# 	sudo privacy_services_manager.py --user "kfinlay" add calendar $BID
 	# done
 	# reminders
-	for BID in com.alfredapp.Alfred # com.omnigroup.OmniFocus2.MacAppStore
+	for BID in com.runningwithcrayons.Alfred-3 # com.omnigroup.OmniFocus2.MacAppStore
 	do
 		sudo privacy_services_manager.py --user "kfinlay" add reminders $BID
 	done
 	# location
-	for BID in org.herf.Flux com.apple.reminders weather com.apple.Maps tracesOf.Uebersicht speedtest
+	for BID in org.herf.Flux com.apple.reminders com.apple.Maps tracesOf.Uebersicht com.ookla.speedtest-macos
 	do
 		sudo privacy_services_manager.py --user "kfinlay" add location $BID
 	done
